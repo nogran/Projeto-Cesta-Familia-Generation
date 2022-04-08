@@ -2,11 +2,9 @@
 
 Projeto-Integrador-Turma-49
 
-Gustavo Henrique Marques de Souza
-Mateus Nogueira
 Alexandre Barbosa
-Taina Xavier
 Daniel Gardeli
+Gustavo Henrique Marques de Souza
 Leticia Alves Zuniga
-
-
+Mateus Nogueira
+Taina Xavier
