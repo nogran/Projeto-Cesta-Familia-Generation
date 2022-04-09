@@ -4,6 +4,7 @@
 
 ### 6ª Família: programa social para pessoas em situação de vulnerabilidade financeira
 
+Integrantes do Projeto:
 Alexandre Barbosa
 Daniel Gardeli
 Gustavo Henrique Marques de Souza
