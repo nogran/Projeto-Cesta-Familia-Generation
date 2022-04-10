@@ -8,5 +8,6 @@ public class CestaFamilia {
 		p1.checarIdade();
 		p1.calcularRenda();
 		p1.cesta();
+		p1.imprimirInfo();
 	}
 }

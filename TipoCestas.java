@@ -6,9 +6,9 @@ public class TipoCestas {
 	
 	void cesta() {
 	String tipoCesta1 = "Cesta Kids";
-	String tipoCesta2 = "Cesta Zero Açúcar";
+	String tipoCesta2 = "Cesta Zero AÃ§Ãºcar";
 	String tipoCesta3 = "Cesta Fit";
-	String tipoCesta4 = "Cesta Zero Glúten";
+	String tipoCesta4 = "Cesta Zero GlÃºten";
 	
 	ArrayList<String> tipoCestas = new ArrayList<>();
 	

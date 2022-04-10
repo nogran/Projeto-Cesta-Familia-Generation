@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class Pessoa {
 
+	//Pessoa p1 = new Pessoa();
 	//Atributos
 	String nome;
 	String end;
@@ -14,69 +15,82 @@ public class Pessoa {
 	int quantidadePessoas;
 	double rendaTotal;
 	double rendaPessoa;
-	double salarioMinimo = 1200.00;
+	double salarioMinimo = 1212.00;
+	String GREEN_BG = "\u001B[42m";
+	String RED_BG = "\u001B[41m";
+	String BLACK = "\u001B[30m";
+	String RESET = "\u001B[0m";
 	
 	Scanner leia = new Scanner(System.in);	
 	
-	void checarIdade () {
+	void checarIdade() {
 		System.out.print("Digite a idade: ");
 		idade = leia.nextInt();
 		leia.nextLine();
+		
 		if (idade >= 18) {
 			Inserir();
 		}
+		else if (idade<18 && idade>=0){
+			System.out.println(RED_BG+"VocÃª nÃ£o pode ter acesso."+RESET);
+			System.exit(idade); //finalizar o programa
+		}
 		else {
-			System.out.println("Você não pode ter acesso");
+			System.out.println(RED_BG+"Idade invalida."+RESET);
+			System.exit(idade);
 		}
 	}
 	
 	void Inserir() {
-		
 		System.out.print("Digite o nome: ");
 		nome = leia.nextLine();
-		
-		System.out.print("Digite o endereço: ");
+		System.out.print("Digite o endereÃ§o: ");
 		end = leia.nextLine();
 		//leia.nextLine();
 		System.out.print("Digite o CPF: ");
 		cpf = leia.nextLine();
 		System.out.println();
-		System.out.println("Quantas pessoas moram com você?");
+		System.out.print("Quantas pessoas moram com vocÃª? ");
 		quantidadePessoas = leia.nextInt();
-		System.out.println("Qual a renda total da família (incluindo você)?");
+		System.out.print("Qual a renda total da famÃ­lia (incluindo vocÃª)? ");
 		rendaTotal = leia.nextDouble();
-		
-		System.out.println("Nome: "+nome);
-		System.out.println("Idade: "+idade);
-		System.out.println("Endereço: "+end);
-		System.out.println("CPF: "+cpf);
-		System.out.println("Quantidade de pessoas da residência: "+ quantidadePessoas);
-		System.out.println("Renda Total da família: "+ rendaTotal);
-		leia.close();
-		}
+		System.out.println();
+	}
 	
 	void calcularRenda () {
 		rendaPessoa = rendaTotal / quantidadePessoas;
-		System.out.printf("Renda por pessoa: %.2f\n", rendaPessoa);
 		if (rendaPessoa<= salarioMinimo && rendaPessoa >= 600.00) {
 			int quantidadeCesta = 1;
-			System.out.println("Você tem direito a 1 cesta!");	
+			System.out.println(GREEN_BG+BLACK+"VocÃª tem direito Ã  1 cesta!"+RESET);
 		}
 		else if (rendaPessoa < 600.00 && rendaPessoa >= 400.00) {
 			int quantidadeCesta = 2;
-			System.out.println("Você tem direito a 2 cestas!");
+			System.out.println(GREEN_BG+BLACK+"VocÃª tem direito Ã  2 cestas!"+RESET);
 		}
 		else if (rendaPessoa < 400.00 && rendaPessoa >= 200.00) {
 			int quantidadeCesta = 3;
-			System.out.println("Você tem direito a 3 cestas!");
+			System.out.println(GREEN_BG+BLACK+"VocÃª tem direito Ã  3 cestas!"+RESET);
 		}
 		else if(rendaPessoa < 200.00 && rendaPessoa >= 0.00) {
 			int quantidadeCesta = 4;
-			System.out.println("Você tem direito a 4 cestas!");
+			System.out.println(GREEN_BG+BLACK+"VocÃª tem direito Ã  4 cestas!"+RESET);
 		}
 		else {
-			System.out.println("Você não atende os requisitos para receber a cesta.");
+			System.out.println(RED_BG+"VocÃª nÃ£o atende os requisitos para receber a cesta."+RESET);
 		}
+		System.out.println();
+	}
+	
+	void imprimirInfo() {
+		System.out.println("--------------Dados Cadastrados--------------");
+		System.out.println("Nome: "+nome);
+		System.out.println("Idade: "+idade);
+		System.out.println("EndereÃ§o: "+end);
+		System.out.println("CPF: "+cpf);
+		System.out.println("Quantidade de pessoas da residÃªncia: "+ quantidadePessoas);
+		System.out.println("Renda Total da famÃ­lia: R$"+ rendaTotal);
+		System.out.printf("Renda por pessoa: R$%.2f\n", rendaPessoa);
+		leia.close();
 	}
 
 	void cesta() {
