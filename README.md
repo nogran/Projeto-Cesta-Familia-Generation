@@ -11,4 +11,4 @@
 [Gustavo Henrique Marques de Souza](https://github.com/guhms1998)<br>
 [Leticia Alves Zuniga](https://github.com/LeZuniga)<br>
 [Mateus Nogueira](https://github.com/nogran)<br>
-[Taina Xavier](https://github.com/taaixsp)<br>
+[Tainã Xavier](https://github.com/taaixsp)<br>
