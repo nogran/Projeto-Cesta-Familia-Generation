@@ -24,7 +24,7 @@ public class Pessoa {
 		if (idade >= 18) {
 			Inserir();
 		} else if (idade < 18 && idade >= 0) {
-			System.out.println(RED_BG + "VocÃª nÃ£o pode ter acesso." + RESET);
+			System.out.println(RED_BG + "Você não pode ter acesso." + RESET);
 			
 			// finaliza o programa
 			System.exit(idade); 
@@ -41,16 +41,16 @@ public class Pessoa {
 	void Inserir() { 
 		System.out.print("Digite o nome: ");
 		nome = leia.nextLine();
-		System.out.print("Digite o endereÃ§o: ");
+		System.out.print("Digite o endereço: ");
 		end = leia.nextLine();
-		System.out.print("Digite o nÃºmero de telefone: ");
+		System.out.print("Digite o número de telefone: ");
 		telefone = leia.nextLine();
 		System.out.print("Digite o CPF: ");
 		cpf = leia.nextLine();
 		System.out.println();
-		System.out.print("Quantas pessoas moram com vocÃª? ");
+		System.out.print("Quantas pessoas moram com você? ");
 		quantidadePessoas = leia.nextInt();
-		System.out.print("Qual a renda total da famÃ­lia (incluindo vocÃª)? ");
+		System.out.print("Qual a renda total da família (incluindo você)? ");
 		rendaTotal = leia.nextDouble();
 		System.out.println();
 	}
@@ -60,32 +60,32 @@ public class Pessoa {
 		rendaPessoa = rendaTotal / quantidadePessoas;
 		if (rendaPessoa <= salarioMinimo && rendaPessoa >= 600.00) {
 			quantidadeCesta = 1;
-			System.out.println(GREEN_BG + BLACK + "VocÃª tem direito Ã  1 cesta!" + RESET);
+			System.out.println(GREEN_BG + BLACK + "Você tem direito à 1 cesta!" + RESET);
 		}
 		else if (rendaPessoa < 600.00 && rendaPessoa >= 400.00) {
 			quantidadeCesta = 2;
-			System.out.println(GREEN_BG + BLACK + "VocÃª tem direito Ã  2 cestas!" + RESET);
+			System.out.println(GREEN_BG + BLACK + "Você tem direito à 2 cestas!" + RESET);
 		}
 		else if (rendaPessoa < 400.00 && rendaPessoa >= 200.00) {
 			quantidadeCesta = 3;
-			System.out.println(GREEN_BG + BLACK + "VocÃª tem direito Ã  3 cestas!" + RESET);
+			System.out.println(GREEN_BG + BLACK + "Você tem direito à 3 cestas!" + RESET);
 		}
 		else if (rendaPessoa < 200.00 && rendaPessoa >= 0.00) {
 			quantidadeCesta = 4;
-			System.out.println(GREEN_BG + BLACK + "VocÃª tem direito Ã  4 cestas!" + RESET);
+			System.out.println(GREEN_BG + BLACK + "Você tem direito à 4 cestas!" + RESET);
 		}
 		else {
-			System.out.println(RED_BG + "VocÃª nÃ£o atende os requisitos para receber a cesta." + RESET);
+			System.out.println(RED_BG + "Você não atende os requisitos para receber a cesta." + RESET);
 		}
 		System.out.println();
 	}
 	
 	void cesta() { 
-		String tipoCesta1 = "Cesta Comum (PadrÃ£o)";
+		String tipoCesta1 = "Cesta Comum (Padrão)";
 		String tipoCesta2 = "Cesta Kids";
-		String tipoCesta3 = "Cesta Zero AÃ§Ãºcar";
+		String tipoCesta3 = "Cesta Zero Açúcar";
 		String tipoCesta4 = "Cesta Fit";
-		String tipoCesta5 = "Cesta Zero GlÃºten";
+		String tipoCesta5 = "Cesta Zero Glúten";
 
 		//array para salvar os tipos de cestas
 		ArrayList<String> tipoCestas = new ArrayList<>(); 
@@ -102,10 +102,10 @@ public class Pessoa {
 			}
 			
 		System.out.println();
-		System.out.println("VocÃª gostaria de mudar alguma Cesta ? Caso selecione NÃƒO, "
-				+ "a cesta escolhida serÃ¡ a padrÃ£o");
+		System.out.println("Você gostaria de mudar alguma Cesta ? Caso selecione NÃO, "
+				+ "a cesta escolhida será a padrão");
 		
-		System.out.println("Digite [1] para SIM ou [2] para NÃƒO. ");
+		System.out.println("Digite [1] para SIM ou [2] para NÃO. ");
 		
 		//variavel n recebe valor se o usuario quer trocar cesta ou nao
 		int n = leia.nextInt(); 
@@ -118,9 +118,9 @@ public class Pessoa {
 				System.out.println();
 				
 				// se o numero de cestas for igual ao numero que deseja trocar 
-				if(quantidadeCesta == numeroDeTrocas) {  
-					System.out.println("Digite o nÃºmero da Cesta que deseja trocar: ");
-					System.out.println("OpÃ§Ãµes de cestas: ");
+				if(quantidadeCesta == 1) {  
+					System.out.println("Digite o número da Cesta que deseja trocar: ");
+					System.out.println("Opções de cestas: ");
 					
 					//loop para imprimir itens do array de cestas
 					for (int i=1; i<tipoCestas.size(); i++) {  
@@ -129,16 +129,16 @@ public class Pessoa {
 					
 					//ler numero da cesta para troca
 					int c = leia.nextInt(); 
-					System.out.println("Suas Cestas sÃ£o do tipo "+tipoCestas.get(c-1)+".");
+					System.out.println("Suas Cestas são do tipo "+tipoCestas.get(c)+".");
 					
 					//adiciona no array cestas do pedido a cesta escolhida pelo usuario
 					cestasDoPedido.add(tipoCestas.get(c));
 				}
 				
 				//se quantidade de cesta da pessoa for maior que a quantide que deseja trocar  
-				else if(quantidadeCesta>numeroDeTrocas) {  
-					System.out.println("Digite o nÃºmero da Cesta que deseja trocar: ");
-					System.out.println("OpÃ§Ãµes de cestas: ");
+				else if(quantidadeCesta>=numeroDeTrocas) {  
+					System.out.println("Digite o número da Cesta que deseja trocar: ");
+					System.out.println("Opções de cestas: ");
 					
 					//loop para imprimir itens do array de cestas
 					for (int i=1; i<tipoCestas.size(); i++) { 
@@ -166,16 +166,20 @@ public class Pessoa {
 					System.out.println();
 					System.out.println("Pre cadastro realizado com sucesso! Por favor envie a documentacao necessaria.");
 				}
+				else {
+					System.out.println("Digite um valor válido!");
+					System.exit(numeroDeTrocas);
+				}
 		}
 		
 		//n igual a 2 -> nao quer trocar de cesta
 		else if (n == 2) {
-			System.out.println("Suas Cestas sÃ£o do tipo "+tipoCestas.get(0)+".");
+			System.out.println("Suas Cestas são do tipo "+tipoCestas.get(0)+".");
 		}
 		
 		//caso digite numero diferente de [1]sim ou [2]nao
 		else {
-			System.out.println(RED_BG + "Valor digitado invÃ¡lido! Registre seus dados novamente." + RESET);
+			System.out.println(RED_BG + "Valor digitado inválido! Registre seus dados novamente." + RESET);
 			System.exit(n);
 		}
 	}
@@ -185,11 +189,11 @@ public class Pessoa {
 		System.out.println("--------------Dados Cadastrados--------------");
 		System.out.println("Nome: " + nome);
 		System.out.println("Idade: " + idade);
-		System.out.println("EndereÃ§o: " + end);
+		System.out.println("Endereço: " + end);
 		System.out.println("Telefone: "+telefone);
 		System.out.println("CPF: " + cpf);
-		System.out.println("Quantidade de pessoas da residÃªncia: " + quantidadePessoas);
-		System.out.println("Renda Total da famÃ­lia: R$" + rendaTotal);
+		System.out.println("Quantidade de pessoas da residência: " + quantidadePessoas);
+		System.out.println("Renda Total da família: R$" + rendaTotal);
 		System.out.printf("Renda por pessoa: R$%.2f\n", rendaPessoa);
 		System.out.println("Quantidade total de cestas: " + quantidadeCesta);
 		System.out.println("Quantidade de cestas especiais: " + numeroDeTrocas);
