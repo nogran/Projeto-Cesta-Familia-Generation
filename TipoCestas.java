@@ -21,7 +21,7 @@ public class TipoCestas extends PessoaController {
 		tipoCestas.add(tipoCesta5);
 		
 		//loop para imprimir itens do array de cestas
-		for (int i=0; i<tipoCestas.size(); i++) { 
+		for (int i=0; i<tipoCestas.size(); i++) {   //.size retorna quantidade de itens do array tiposCestas
 			System.out.println((i+1)+". "+tipoCestas.get(i));
 			}
 			
@@ -37,23 +37,20 @@ public class TipoCestas extends PessoaController {
 		
 		//n igual a 1 -> usuario quer trocar a cesta
 		if (n == 1) { 
-				System.out.println("Quantas cestas gostaria de trocar ? ");
-				numeroDeTrocas = leia.nextInt();
-				System.out.println();
-				
+			
 				// se o numero de cestas for igual ao numero que deseja trocar 
 				if(quantidadeCesta == 1) {  
 					System.out.println("Digite o número da Cesta que deseja trocar: ");
 					System.out.println("Opções de cestas: ");
 					
 					//loop para imprimir itens do array de cestas
-					for (int i=1; i<tipoCestas.size(); i++) {  
+					for (int i=1; i<tipoCestas.size(); i++) {  //.size retorna quantidade de itens do array tiposCestas
 						System.out.println((i)+". "+tipoCestas.get(i));
 						}
 					
 					//ler numero da cesta para troca
 					int c = leia.nextInt(); 
-					System.out.println("Suas Cestas são do tipo "+tipoCestas.get(c)+".");
+					System.out.println("Sua Cesta e do tipo "+tipoCestas.get(c)+".");
 					
 					//adiciona no array cestas do pedido a cesta escolhida pelo usuario
 					cestasDoPedido.add(tipoCestas.get(c));
@@ -61,11 +58,16 @@ public class TipoCestas extends PessoaController {
 				
 				//se quantidade de cesta da pessoa for maior que a quantide que deseja trocar  
 				else if(quantidadeCesta>=numeroDeTrocas) {  
+					
+					System.out.println("Quantas cestas gostaria de trocar ? ");
+					numeroDeTrocas = leia.nextInt();
+					System.out.println();
+					
 					System.out.println("Digite o número da Cesta que deseja trocar: ");
 					System.out.println("Opções de cestas: ");
 					
 					//loop para imprimir itens do array de cestas
-					for (int i=1; i<tipoCestas.size(); i++) { 
+					for (int i=1; i<tipoCestas.size(); i++) {  //.size retorna quantidade de itens do array tiposCestas
 						System.out.println((i)+". "+tipoCestas.get(i));
 					}
 					
@@ -96,9 +98,14 @@ public class TipoCestas extends PessoaController {
 				}
 		}
 		
-		//n igual a 2 -> nao quer trocar de cesta
-		else if (n == 2) {
+		//n igual a 2 -> nao quer trocar de cesta e possui mais de 1 cesta
+		else if (n == 2 && quantidadeCesta > 1) {
 			System.out.println("Suas Cestas são do tipo "+tipoCestas.get(0)+".");
+		}
+		
+		//n igual a 2 -> nao quer trocar de cesta e usuario tem apenas 1 cesta
+		else if (n == 2 && quantidadeCesta == 1) {
+			System.out.println("Sua Cesta e do tipo "+tipoCestas.get(0)+".");
 		}
 		
 		//caso digite numero diferente de [1]sim ou [2]nao
