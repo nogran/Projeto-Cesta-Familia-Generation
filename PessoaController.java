@@ -16,18 +16,18 @@ public class PessoaController extends Pessoa {
 				Inserir();
 			} else if (idade < 0) { 
 				// Caso digitar idade negativa.
-				System.out.println(RED_BG + "Idade invalida." + RESET);
+				System.out.println(RED_BG + "Idade inválida." + RESET_COLOR);
 
-				// finaliza o programa.
+				// Finaliza o programa.
 				System.exit(idade);
 			}
 			else {
 				// Caso digitar 0 < idade > 18.
-				System.out.println(RED_BG + "Você não pode ter acesso." + RESET);
+				System.out.println(RED_BG + "Você não pode ter acesso." + RESET_COLOR);
 				System.exit(idade);
 			}
 		} catch (InputMismatchException e) {
-			System.out.println(RED_BG + "Idade invalida." + RESET);
+			System.out.println(RED_BG + "Por favor digite uma idade válida." + RESET_COLOR);
 			System.exit(idade);
 		}
 	}

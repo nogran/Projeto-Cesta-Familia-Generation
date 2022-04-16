@@ -11,7 +11,7 @@ public class TipoCestas extends PessoaController {
 		String tipoCesta4 = "Cesta Fit";
 		String tipoCesta5 = "Cesta Zero Glúten";
 
-		//array para salvar os tipos de cestas
+		// Array para salvar os tipos de cestas
 		ArrayList<String> tipoCestas = new ArrayList<>(); 
 
 		tipoCestas.add(tipoCesta1);
@@ -20,7 +20,7 @@ public class TipoCestas extends PessoaController {
 		tipoCestas.add(tipoCesta4);
 		tipoCestas.add(tipoCesta5);
 		
-		//loop para imprimir itens do array de cestas
+		// Loop para imprimir itens do array de cestas
 		for (int i=0; i<tipoCestas.size(); i++) {   //.size retorna quantidade de itens do array tiposCestas
 			System.out.println((i+1)+". "+tipoCestas.get(i));
 			}
@@ -110,7 +110,7 @@ public class TipoCestas extends PessoaController {
 		
 		//caso digite numero diferente de [1]sim ou [2]nao
 		else {
-			System.out.println(RED_BG + "Valor digitado inválido! Registre seus dados novamente." + RESET);
+			System.out.println(RED_BG + "Valor digitado inválido! Registre seus dados novamente." + RESET_COLOR);
 			System.exit(n);
 		}
 	}
