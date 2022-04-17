@@ -14,6 +14,6 @@ public class Pessoa {
 
 	Scanner leia = new Scanner(System.in);
 
-	// Array cestas especiais do pedido
+	// Array cestas especiais do pedido.
 	ArrayList<String> cestasDoPedido = new ArrayList<>();
 }

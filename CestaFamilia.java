@@ -1,8 +1,8 @@
 package projetoJava;
 
 public class CestaFamilia {
-
-	public static void main(String[] args) {		
+												// Time.
+	public static void main(String[] args) throws InterruptedException {		
 		
 		RendaController p1 = new RendaController();
 		p1.imprimirLogo();

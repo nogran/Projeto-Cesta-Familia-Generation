@@ -18,7 +18,8 @@ public class RendaController extends TipoCestas {
 			quantidadeCesta = 4;
 			System.out.println(GREEN_BG + BLACK + "Você tem direito à 4 cestas!" + RESET_COLOR);
 		} else {
-			System.out.println(RED_BG + "Você não atende os requisitos para receber a cesta." + RESET_COLOR);
+			System.out.println(RED_BG + "Você não atende aos requisitos para receber a cesta." + RESET_COLOR);
+			System.exit(quantidadeCesta);
 		}
 		System.out.println();
 	}	

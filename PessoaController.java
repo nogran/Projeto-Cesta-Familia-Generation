@@ -15,18 +15,18 @@ public class PessoaController extends Pessoa {
 				Inserir();
 			} else if (idade < 0) { 
 				// Caso digitar idade negativa.
-				System.out.println(RED_BG + "Idade inválida." + RESET_COLOR);
+				System.out.println(RED_BG + "\nIdade inválida." + RESET_COLOR);
 
 				// Finaliza o programa.
 				System.exit(idade);
 			}
 			else {
 				// Caso digitar 0 < idade > 18.
-				System.out.println(RED_BG + "Você não pode ter acesso." + RESET_COLOR);
+				System.out.println(RED_BG + "\nVocê não pode ter acesso." + RESET_COLOR);
 				System.exit(idade);
 			}
 		} catch (InputMismatchException e) {
-			System.out.println(RED_BG + "Por favor digite apenas números." + RESET_COLOR);
+			System.out.println(RED_BG + "\nIdade inválida. Por favor digite apenas números." + RESET_COLOR);
 			System.exit(idade);
 		}
 	}
@@ -46,7 +46,7 @@ public class PessoaController extends Pessoa {
 			quantidadePessoas = leia.nextInt();
 		}
 		catch (InputMismatchException e) {
-			System.out.println(RED_BG + "Por favor digite apenas números." + RESET_COLOR);
+			System.out.println(RED_BG + "\nPor favor digite apenas números." + RESET_COLOR);
 			System.exit(quantidadePessoas);
 		}
 		try {
@@ -54,7 +54,7 @@ public class PessoaController extends Pessoa {
 			rendaTotal = leia.nextDouble();
 		}
 		catch  (InputMismatchException e) {
-			System.out.println(RED_BG + "Por favor digite apenas números." + RESET_COLOR);
+			System.out.println(RED_BG + "\nPor favor digite apenas números." + RESET_COLOR);
 			System.exit((int) rendaTotal);
 		}
 		System.out.println();
