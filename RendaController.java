@@ -2,7 +2,7 @@ package projetoJava;
 
 public class RendaController extends TipoCestas {
 	
-	// Funcao para verficiar beneficio e calcular numero de cestas.
+	// Funcao para verficiar beneficio e calcular número de cestas.
 	void calcularRenda() {
 		rendaPessoa = rendaTotal / quantidadePessoas;
 		if (rendaPessoa <= salarioMinimo && rendaPessoa >= 600.00) {
@@ -21,6 +21,5 @@ public class RendaController extends TipoCestas {
 			System.out.println(RED_BG + "Você não atende aos requisitos para receber a cesta." + RESET_COLOR);
 			System.exit(quantidadeCesta);
 		}
-		System.out.println();
 	}	
 }

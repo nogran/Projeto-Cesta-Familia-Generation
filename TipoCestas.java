@@ -11,7 +11,7 @@ public class TipoCestas extends PessoaController {
 		String tipoCesta4 = "Cesta Fit";
 		String tipoCesta5 = "Cesta Zero Glúten";
 
-		// Array para salvar os tipos de cestas
+		// Array para salvar os tipos de cestas.
 		ArrayList<String> tipoCestas = new ArrayList<>(); 
 
 		tipoCestas.add(tipoCesta1);
@@ -20,18 +20,19 @@ public class TipoCestas extends PessoaController {
 		tipoCestas.add(tipoCesta4);
 		tipoCestas.add(tipoCesta5);
 		
-		Thread.sleep(1600);
+		Thread.sleep(2400);
+		System.out.println("\nVocê gostaria de mudar alguma Cesta? Caso selecione NÃO, "
+				+ "a cesta escolhida será a padrão.");
+		Thread.sleep(2400);
+		System.out.println();
 		
-		// Loop para imprimir itens do array de cestas
-		for (int i=0; i<tipoCestas.size(); i++) {   // .size retorna quantidade de itens do array tiposCestas
+		// Loop para imprimir itens do array de cestas.
+		for (int i=0; i<tipoCestas.size(); i++) {   // .size retorna quantidade de itens do array tiposCestas.
 			System.out.println((i+1)+". "+tipoCestas.get(i));
 			}
-			
-		System.out.println();
-		System.out.println("Você gostaria de mudar alguma Cesta ? Caso selecione NÃO, "
-				+ "a cesta escolhida será a padrão");
 		
-		System.out.println("Digite [1] para SIM ou [2] para NÃO. ");
+		Thread.sleep(2000);
+		System.out.println("\nDigite [1] para SIM ou [2] para NÃO. ");
 		
 		// Variável n recebe valor se o usuário quer trocar cesta ou nao.
 		int n = leia.nextInt(); 
@@ -61,7 +62,7 @@ public class TipoCestas extends PessoaController {
 				// Caso a quantidade de cesta da pessoa for maior que a quantidade que deseja trocar.
 				else if(quantidadeCesta>=numeroDeTrocas) {  
 					
-					System.out.println("Quantas cestas gostaria de trocar ? ");
+					System.out.println("Quantas cestas gostaria de trocar? ");
 					numeroDeTrocas = leia.nextInt();
 					System.out.println();
 					
