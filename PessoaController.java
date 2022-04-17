@@ -7,9 +7,8 @@ public class PessoaController extends Pessoa {
 	void checarIdade() {
 		System.out.println("Seja Bem-Vinde :D");
 		System.out.println();
-		System.out.print("Digite a idade: ");
-
 		try {
+			System.out.print("Digite a idade: ");
 			idade = leia.nextInt();
 			leia.nextLine();
 			if (idade >= 18) {
@@ -27,7 +26,7 @@ public class PessoaController extends Pessoa {
 				System.exit(idade);
 			}
 		} catch (InputMismatchException e) {
-			System.out.println(RED_BG + "Por favor digite uma idade válida." + RESET_COLOR);
+			System.out.println(RED_BG + "Por favor digite apenas números." + RESET_COLOR);
 			System.exit(idade);
 		}
 	}
@@ -42,11 +41,22 @@ public class PessoaController extends Pessoa {
 		telefone = leia.nextLine();
 		System.out.print("Digite o CPF: ");
 		cpf = leia.nextLine();
-		System.out.println();
-		System.out.print("Quantas pessoas moram com você? ");
-		quantidadePessoas = leia.nextInt();
-		System.out.print("Qual a renda total da família (incluindo você)? ");
-		rendaTotal = leia.nextDouble();
+		try {
+			System.out.print("Quantas pessoas moram com você? ");
+			quantidadePessoas = leia.nextInt();
+		}
+		catch (InputMismatchException e) {
+			System.out.println(RED_BG + "Por favor digite apenas números." + RESET_COLOR);
+			System.exit(quantidadePessoas);
+		}
+		try {
+			System.out.print("Qual a renda total da família (incluindo você)? ");
+			rendaTotal = leia.nextDouble();
+		}
+		catch  (InputMismatchException e) {
+			System.out.println(RED_BG + "Por favor digite apenas números." + RESET_COLOR);
+			System.exit((int) rendaTotal);
+		}
 		System.out.println();
 	}
 
