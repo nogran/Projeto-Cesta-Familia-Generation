@@ -1,8 +1,14 @@
 # Projeto Bloco 01 Java - [Generation Brazil](https://brazil.generation.org/)
 
-## Projeto-Integrador-Turma-49
+## 6ª Família - Projeto Integrador Turma 49 - 2022
 
-### 6ª Família: programa social para pessoas em situação de vulnerabilidade financeira
+### O que é?
+
+O 6ª Família é um programa idealizado e desenvolvido para auxiliar uma ONG que realiza a distribuição de alimentos para famílias em vulnerabilidade social. A cesta é adequada para a necessidade de cada família, quantidade de membros, e se algum membro tem algum tipo de restrição alimentar. 
+
+### Fluxograma
+<img src="6ªFamília.jpg" width="200" height="100"/>
+
 
 ### Integrantes do Projeto:
 
