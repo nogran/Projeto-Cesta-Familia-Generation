@@ -5,7 +5,7 @@
 ### O que é?
 
 O 6ª Família é um programa idealizado e desenvolvido para auxiliar uma ONG que realiza a distribuição de alimentos para famílias em vulnerabilidade social. A cesta é adequada para a necessidade de cada família, quantidade de membros, e se algum membro tem algum tipo de restrição alimentar. 
-
+[Apresentação em PDF](Apresentacao-do-Projeto-Bloco-01-6a-Familia.pdf)
 ### Fluxograma:
 <img src="Screenshot_fluxograma.jpg" width="900" height="500"/>
 
