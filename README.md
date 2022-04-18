@@ -7,7 +7,10 @@
 O 6ª Família é um programa idealizado e desenvolvido para auxiliar uma ONG que realiza a distribuição de alimentos para famílias em vulnerabilidade social. A cesta é adequada para a necessidade de cada família, quantidade de membros, e se algum membro tem algum tipo de restrição alimentar. 
 
 ### Fluxograma:
-<img src="6ªFamília.jpg" width="900" height="500"/>
+<img src="Screeshot_fluxograma.jpg" width="900" height="500"/>
+
+### Console:
+<img src="Screeshot_console.jpg" width="900" height="500"/>
 
 
 ### Integrantes do Projeto:
